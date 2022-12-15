@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Mask Classifier</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="birds_image">Birds Image</string>
+    <string name="output">Output:</string>
+    <string name="click_on_the_result_text_to_search_on_google">Click on the result text to search on Google</string>
+    <string name="time_elapsed">Time Elapsed:</string>
+    <string name="battery_level">Battery Level:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
