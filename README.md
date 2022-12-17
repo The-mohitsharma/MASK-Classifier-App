@@ -28,40 +28,26 @@ so here I will take a tensor flow model from [the Teachable machine platform] th
 ## Acknowledgements and Installation
 
  **First** I initialised the package name.
-package com.mohit.maskclassifier;
+![carbon](https://user-images.githubusercontent.com/85448730/208246944-65784c92-5193-44b4-8f09-5e35f92a8397.png)
 
 
 **Second**, I import the essential libraries Import libraries - It can include everything needed to build an app, including source code, resource files, and an Android manifest  like;
 
-
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
-
-import com.mohit.maskclassifier.adapters.ProcessedImageAdapter;
-import com.mohit.maskclassifier.databinding.ActivityMainBinding;
-import com.mohit.maskclassifier.ml.Maskrecognise;
-import com.mohit.maskclassifier.utils.ViewAnimation;
+![carbon-1](https://user-images.githubusercontent.com/85448730/208246947-4ab5b4da-a8a7-48e5-82ee-dbb1208da826.png)
 
 
 
 **Third** I import the tf lite library to support the (Tensor image & label category)
 
 
-import org.tensorflow.lite.support.image.TensorImage;
-import org.tensorflow.lite.support.label.Category;
+![carbon-1 2](https://user-images.githubusercontent.com/85448730/208246950-519f138e-5c89-49b5-9818-6b865df1434c.png)
 
 
 Here I define Activity binding to use for activity view binding it generates a binding class for each XML layout file in that module. An instance of a critical class contains direct references to all views with an ID in the corresponding layout.
 Here I initiated a string for bird recognise; time elapsed; battery level for each recognised image.;
 
 
-String[] maskRecognised; //  used for list of mask recognised.
-String[] timeElapsed; //  used for  time elapsed.
-String[] batteryLevel; // battery status for each recognised image.
+![carbon-1 3](https://user-images.githubusercontent.com/85448730/208246951-77bb8a30-0faa-43b6-bf64-59ecc8bad569.png)
 
 
 ![Picture 1](https://user-images.githubusercontent.com/85448730/208182882-64c4163d-66e5-4f86-b3dd-909a7e6aac51.png)
@@ -83,9 +69,7 @@ Camera and image and viewer;**
 
 
 
-**ViewAnimation.init(binding.fabCamera); // initialised animation in floating action button for camera.
-ViewAnimation.init(binding.fabImage);// initialised animation in floating action button for image.
-ViewAnimation.init(binding.fabFileViewer);**
+![carbon-1 4](https://user-images.githubusercontent.com/85448730/208246952-cc451f26-2070-450a-95cf-c36b99da6232.png)
 
 
 Creating a condition for checking;
@@ -117,11 +101,7 @@ Put a for loop to recognise the length of the bird, the time elapsed, and batter
 
 
 
-{
-   receiveString = receiveString + "Mask Recognised: " + birdRecognised[i] + "\n";
-   receiveString = receiveString + "Time Elapsed: " + timeElapsed[i] + "\n";
-   receiveString = receiveString + "Battery Level: " + batteryLevel[i] + "\n";
-}
+![carbon-1 5](https://user-images.githubusercontent.com/85448730/208246954-3d20f727-5a4d-4131-a953-967fbf3bd122.png)
 
 
   Here Activity will be launch means image launch and getting bitmaps 
@@ -140,11 +120,7 @@ When the image is too large, or you wish to control its size for better memory o
 
 
 **After this process image rendering will start for all the selected image will go through a loop too, Recognise the selected image and send them to the adapter.
-private void imageRender(Bitmap[] urls)
-for (int i = 0; i < urls.length; i++) {
-   recognise(urls[i], i);
-}
-
+![carbon-1 6](https://user-images.githubusercontent.com/85448730/208246955-37cee800-0a12-4ae7-bb80-7c10e9610420.png)
 
 
 ## Support And TensorFlow Trained Model
@@ -182,42 +158,28 @@ Note that the tooling will automatically configure the module’s dependencies f
 
  **In the end, you’ll see the following. The BirdModel.flite file has been successfully imported, and it displays high-level model information like input and output and some sample code to get you started.
 After this, I used TensorFlow APIs for trained model recognition.
+
 **Create inputs for references;
 
 
 
-Maskrecognise model = Maskrecognise.newInstance(context);
-
-**// Creates inputs for reference.**
-long initial_time=System.currentTimeMillis();
-TensorImage image = TensorImage.fromBitmap(bitmap); // the bit map is converted to tensor image.The tensor library
-//comes from tensor flow lite library.
+![carbon-1 7](https://user-images.githubusercontent.com/85448730/208246968-2e52bc34-24b9-44e8-8172-c1dcbaf7a6c3.png)
 
 
 
 
 
-**// Runs model inference and gets result.**
-Maskrecognise.Outputs outputs = model.process(image); // The tensor image is getting converted to tensor buffer
-//which is recognised by the model to fetch the liable and probability.
-List<Category> probability = outputs.getProbabilityAsCategoryList();
-String data=getHighestProbability(probability);
-long time_elapsed=System.currentTimeMillis();
+![carbon-1 8](https://user-images.githubusercontent.com/85448730/208246971-f6282b86-112b-4d59-9d80-842a7af9e943.png)
 
 
-
-Releases the trained model resources if it is no longer used.
-**// Releases model resources if no longer used.
-model.close();
-Log.d("data_response", data);
+![carbon-1 9](https://user-images.githubusercontent.com/85448730/208246975-7e0fc39f-a75a-484b-9075-3c642750d85f.png)
    
 
 
 Here I use the linear search algorithm to calculate the highest 
 Probability with that algorithm, which means we find it will be in floating decimal points or it will be in a string type.
  String getHighestProbability(List<Category> probability) { // calculating the highest probability with linear search algorithm.
-   float max0 = probability.get(0).getScore();
-   String max1 = probability.get(0).getLabel();
+   ![carbon-1 10](https://user-images.githubusercontent.com/85448730/208246976-b7776195-bb09-47e2-9e93-065b1b03dc6f.png)
    
    
 
@@ -234,11 +196,7 @@ Using try and catch the exception.
    
 
 Here I find the current battery level status while processing the multiple images for recognition in one go.
-{ // getting current battery status.
-   int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
-   int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
-   battery = (float) (level * 100 / scale);
-}
+![carbon-1 11](https://user-images.githubusercontent.com/85448730/208246978-a40b9a4e-2d46-4307-b104-6989a1a11287.png)
    
    
    
@@ -248,19 +206,7 @@ This means when I will take multiple images from file explorer and send them to 
 
    
    
-try {
-       maskRecognised=new String[1];
-       timeElapsed=new String[1];
-       batteryLevel=new String[1];
-       Bitmap[] bitmaps=new Bitmap[]{bitmap};
-       imageRender(bitmaps);
-       binding.cameraFragment.setVisibility(View.GONE);
-   } catch (Exception e) {
-       Toast.makeText(this, "Failed to load", Toast.LENGTH_SHORT)
-               .show();
-       Log.e("Camera", e.toString());
-   }
-}
+![carbon-1 12](https://user-images.githubusercontent.com/85448730/208246981-4d1b971d-e03f-4d93-881e-5d921050723b.png)
 
 
                                                  
