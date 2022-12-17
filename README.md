@@ -155,6 +155,11 @@ for (int i = 0; i < urls.length; i++) {
 <img width="978" alt="Screenshot 2022-12-17 at 4 43 47 PM" src="https://user-images.githubusercontent.com/85448730/208238997-c9905458-ff1f-45a6-9b1a-00ab1a6306ff.png">
 
 
+## How Mask app is Taking care of Byte Buffer in the application.
+
+I am using Tensor Image, tensor image in Java takes care of byte buffer class internally in lower and higher version.
+
+2. Yes, i trained model using the sigmoid function in CNN model and quantified loss with cross entropy to compare and update the difference between actual and predicted value gradually decreasing the difference. After this I used metadata to tell the model what kind of input it would receive in android ( this is why I was able to use tensor image) while converting it to tflite. Then just included the model with the bird app Android code and it worked as tensorflow engineers use same algorithm.
 
 ## Optimizations
 
