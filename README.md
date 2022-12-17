@@ -161,6 +161,17 @@ I am using Tensor Image, tensor image in Java takes care of byte buffer class in
 
 2. Yes, i trained model using the sigmoid function in CNN model and quantified loss with cross entropy to compare and update the difference between actual and predicted value gradually decreasing the difference. After this I used metadata to tell the model what kind of input it would receive in android ( this is why I was able to use tensor image) while converting it to tflite. Then just included the model with the bird app Android code and it worked as tensorflow engineers use same algorithm.
 
+
+
+## Model Traning part and Convert into TensorFlow Lite Model.
+
+-<img width="1439" alt="Screenshot 2022-12-17 at 5 11 42 PM" src="https://user-images.githubusercontent.com/85448730/208240141-7d70a582-6a7f-4aa2-ab65-98b161486433.png">
+<img width="1439" alt="Screenshot 2022-12-17 at 5 12 17 PM" src="https://user-images.githubusercontent.com/85448730/208240145-844825ac-e501-40e0-9d47-ed5f2afd28d1.png">
+<img width="1439" alt="Screenshot 2022-12-17 at 5 12 29 PM" src="https://user-images.githubusercontent.com/85448730/208240148-3154db1e-175e-47b6-b9db-c2b6df3c7e5c.png">
+
+
+
+
 ## Optimizations
 
 1. **Add TensorFlow Lite to the Android.**
