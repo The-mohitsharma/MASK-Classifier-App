@@ -230,5 +230,5 @@ final AlertDialog DialogViewDialog = new AlertDialog.Builder(context).create();
 ![WhatsApp Image 2022-12-17 at 4 19 55 PM](https://user-images.githubusercontent.com/85448730/208239235-134d34ba-4c6d-40b6-a88b-44b5cf87a5d3.jpeg)
 ![WhatsApp Image 2022-12-17 at 4 24 31 PM](https://user-images.githubusercontent.com/85448730/208239238-bdbefed8-f69f-4676-8ce1-7dbf140fd08f.jpeg)
 
-Follow this link to play the video demo.👇🏻
+Follow this link to play the video demo.👉🏻
 https://github.com/The-mohitsharma/MASK-Classifier-App/assets/85448730/25550e20-6d26-47ff-b997-3f7987b5942c
